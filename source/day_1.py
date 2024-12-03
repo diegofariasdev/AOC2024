@@ -15,7 +15,10 @@ def sort_list(list):
 	list.sort()
 	return list
 
-def day1_1():
+def day1_1(test_mode = False):
+	if test_mode:
+		print('day 1 1 does not support test mode')
+		return
 	list1, list2 = read_input()
 	list1 = sort_list(list1)
 	list2 = sort_list(list2)
@@ -26,7 +29,10 @@ def day1_1():
 		total_dist += dist
 	print('total dist between the two lists is {}'.format(total_dist))
 
-def day1_2():
+def day1_2(test_mode = False):
+	if test_mode:
+		print('day 1 2 does not support test mode')
+		return
 	list1, list2 = read_input()
 	similarity_score_map = {}
 	similarity_score_sum = 0
