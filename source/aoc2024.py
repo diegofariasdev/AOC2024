@@ -1,12 +1,13 @@
 import sys
 
 from day_1 import day1_1, day1_2
-from day_2 import day2_1
+from day_2 import day2_1, day2_2
 
 challenges = {
 	'11': day1_1,
 	'12': day1_2,
 	'21': day2_1,
+	'22': day2_2,
 }
 
 

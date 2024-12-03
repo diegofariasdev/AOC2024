@@ -9,9 +9,7 @@ def iterate_reports(func, test_mode):
 				total_safe_reports += 1
 	return total_safe_reports
 
-
-def evaluate_report_safety(report):
-	levels = [int(level) for level in report.split(' ')]
+def _evaluate_report_safety(levels):
 	asc_dsc = None
 	for i in range(1, len(levels)):
 		if asc_dsc is None:
@@ -27,5 +25,23 @@ def evaluate_report_safety(report):
 			return False
 	return True
 
+def evaluate_report_safety_1(report):
+	levels = [int(level) for level in report.split(' ')]
+	return _evaluate_report_safety(levels)
+
+def evaluate_report_safety_2(report):
+	levels = [int(level) for level in report.split(' ')]
+	if _evaluate_report_safety(levels):
+		return True
+	for i in range(0 , len(levels)):
+		levels_dropped = levels.copy()
+		del levels_dropped[i]
+		if _evaluate_report_safety(levels_dropped):
+			return True
+	return False
+
 def day2_1(test_mode = False):
-	print('total safe reports is {}'.format(iterate_reports(evaluate_report_safety, test_mode)))
+	print('total safe reports is {}'.format(iterate_reports(evaluate_report_safety_1, test_mode)))
+
+def day2_2(test_mode = False):
+	print('total safe reports is {}'.format(iterate_reports(evaluate_report_safety_2, test_mode)))
