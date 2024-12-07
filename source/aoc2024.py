@@ -4,6 +4,7 @@ from day_1 import day1_1, day1_2
 from day_2 import day2_1, day2_2
 from day_3 import day3_1, day3_2
 from day_4 import day4_1, day4_2
+from day_5 import day5_1, day5_2
 
 challenges = {
 	'11': day1_1,
@@ -14,6 +15,8 @@ challenges = {
 	'32': day3_2,
 	'41': day4_1,
 	'42': day4_2,
+	'51': day5_1,
+	'52': day5_2,
 }
 
 
