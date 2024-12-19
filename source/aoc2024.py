@@ -6,6 +6,7 @@ from day_3 import day3_1, day3_2
 from day_4 import day4_1, day4_2
 from day_5 import day5_1, day5_2
 from day_6 import day6_1, day6_2
+from day_7 import day7_1, day7_2
 
 challenges = {
 	'11': day1_1,
@@ -20,6 +21,8 @@ challenges = {
 	'52': day5_2,
 	'61': day6_1,
 	'62': day6_2,
+	'71': day7_1,
+	'72': day7_2,
 }
 
 
